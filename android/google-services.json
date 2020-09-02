@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "820640156944",
+    "firebase_url": "https://ezberci-43285.firebaseio.com",
+    "project_id": "ezberci-43285",
+    "storage_bucket": "ezberci-43285.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820640156944:android:5ddf0073b492d039772995",
+        "android_client_info": {
+          "package_name": "com.example.ezberci"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "820640156944-ot01hetp1apn9ohk2fesf4fbvj16p747.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ezberci",
+            "certificate_hash": "8970d26420e07ab225ebc62d2ecf9167ef8c92f6"
+          }
+        },
+        {
+          "client_id": "820640156944-ipei0c2gutic3ap76o0jhjas2q07if7v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfG9KOemJvEChPaJVbl0uMn3bLMYJS5F8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "820640156944-ipei0c2gutic3ap76o0jhjas2q07if7v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
