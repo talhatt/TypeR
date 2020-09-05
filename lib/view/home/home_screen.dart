@@ -1,6 +1,7 @@
 import 'package:ezberci/constants.dart';
 import 'package:ezberci/models/user/text/text.dart';
 import 'package:ezberci/services/db_helper.dart';
+import 'package:ezberci/view/game/game_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'add_text_screen.dart';
@@ -57,7 +58,8 @@ class _HomeScreen extends State<HomeScreen> {
     return FutureBuilder(
       future: texts,
       builder: (context, AsyncSnapshot<List<UserText>> snapshot) {
-        if (!snapshot.hasData) return CircularProgressIndicator();
+        if (!snapshot.hasData)
+          return Center(child: CircularProgressIndicator());
         if (snapshot.data.isEmpty)
           return Center(child: Text("Metin listeniz boş görünüyor..."));
         return ListView.builder(
@@ -92,7 +94,9 @@ class _HomeScreen extends State<HomeScreen> {
                             }),
                         IconButton(
                             icon: Icon(Icons.play_circle_outline),
-                            onPressed: () {}),
+                            onPressed: () {
+                              sendUserText(context, snapshot, index);
+                            }),
                       ],
                     ),
                   ),
@@ -101,6 +105,15 @@ class _HomeScreen extends State<HomeScreen> {
             });
       },
     );
+  }
+
+  void sendUserText(
+      BuildContext context, AsyncSnapshot<List<UserText>> snapshot, int index) {
+    Navigator.push(context, MaterialPageRoute(
+      builder: (context) {
+        return GameScreen(snapshot.data[index].metin);
+      },
+    ));
   }
 
   void editUserText(

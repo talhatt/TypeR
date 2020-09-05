@@ -28,7 +28,7 @@ class DbHelper {
   Future<List<UserText>> getUserTexts() async {
     var dbClient = await db;
 
-    var result = await dbClient.query('Yazilar', orderBy: 'baslik');
+    var result = await dbClient.query('Yazilar', orderBy: 'id');
 
     return result.map((data) => UserText.fromObject(data)).toList();
   }
