@@ -1,4 +1,4 @@
-# ezberci
+# TypeR
 
 A new Flutter project.
 
